@@ -332,7 +332,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.5,
+                        width: myScreenWidth / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project1.png',
@@ -370,7 +370,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.5,
+                        width: myScreenWidth / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project2.png',
@@ -408,7 +408,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.5,
+                        width: myScreenWidth / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project3.png',
@@ -446,7 +446,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.5,
+                        width: myScreenWidth / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project4.png',
