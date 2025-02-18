@@ -1,246 +1,263 @@
 import 'package:flutter/material.dart';
-import 'package:myportfolio/vote_me.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-    double myScreenHeight = MediaQuery.sizeOf(context).height;
-    double myScreenWidth = MediaQuery.sizeOf(context).width;
-
     return Container(
-
-      height: myScreenHeight,
-      width: myScreenWidth,
+      height: MediaQuery.sizeOf(context).height,
+      width: MediaQuery.sizeOf(context).width,
       color: Colors.white,
-
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-
         child: Column(
           children: [
-
             Stack(
-              alignment: Alignment.center,
-              clipBehavior: Clip.none,
-              children: [
-
-                Container(
-                  margin: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                  height: 100,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.red, Color(0xFFC1222C)]),
-                    borderRadius:
-                        BorderRadius.vertical(bottom: Radius.circular(50)),
+                alignment: Alignment.center,
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8.0),
+                    height: 100,
+                    decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [Colors.red, Color(0xFFC1222C)]),
+                        borderRadius: BorderRadius.vertical(
+                          bottom: Radius.circular(30),
+                        )),
                   ),
-                ),
-
-                const Positioned(
-                  top: 50,
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Colors.white,
+                  const Positioned(
+                    top: 50,
                     child: CircleAvatar(
-                      radius: 45,
-                      backgroundImage: NetworkImage(
-                           "https://scontent.fmux3-1.fna.fbcdn.net/v/t39.30808-6/430040626_7215015261939972_8046632099632684340_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=BcV5xdV5JnIQ7kNvgGWjoaj&_nc_zt=23&_nc_ht=scontent.fmux3-1.fna&_nc_gid=AqVGb2QHYtN08V6x3sazvXm&oh=00_AYDDGRZxA-aoQuwDERR9HiCW_pTcL-n_X-KdsQpLMIup3g&oe=67B6482E"),
+                      radius: 50,
+                      backgroundColor: Colors.white,
+                      child: CircleAvatar(
+                        radius: 45,
+                        backgroundImage: NetworkImage(
+                            "https://scontent.fmux3-1.fna.fbcdn.net/v/t39.30808-6/430040626_7215015261939972_8046632099632684340_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=BcV5xdV5JnIQ7kNvgGWjoaj&_nc_zt=23&_nc_ht=scontent.fmux3-1.fna&_nc_gid=AqVGb2QHYtN08V6x3sazvXm&oh=00_AYDDGRZxA-aoQuwDERR9HiCW_pTcL-n_X-KdsQpLMIup3g&oe=67B6482E"),
+                        // "https://scontent.fmux3-1.fna.fbcdn.net/v/t39.30808-6/363439514_6453813841393455_4468096957523443186_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=wj2tpa9qDaUQ7kNvgGQRYtb&_nc_zt=23&_nc_ht=scontent.fmux3-1.fna&_nc_gid=AUJ2-MI7gwp5Vv3Nf90vBX8&oh=00_AYAaxitnPsmUlRszeWKVtNCr-BRIzGLz1NuylkMHNT7hFw&oe=67B63F60"),
+                      ),
                     ),
                   ),
-                ),
-
-              ],
+                ]),
+            const SizedBox(
+              height: 50,
             ),
-
-            SizedBox(height: 50,),
-
             const Text(
-              'Qaiser Shameer',
+              "Qaiser Shameer",
               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87,
-                decoration: TextDecoration.none,
-              ),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                  decoration: TextDecoration.none),
             ),
-
-            SizedBox(height: 4,),
-
+            const SizedBox(
+              height: 4,
+            ),
             const Text(
-              'Product Design',
+              "Product Design",
               style: TextStyle(
-                fontSize: 16,
-                color: Colors.black54,
-                decoration: TextDecoration.none,
-              ),
+                  fontSize: 16,
+                  color: Colors.black54,
+                  decoration: TextDecoration.none),
             ),
-
-            SizedBox(height: 8,),
-
-            Row(
+            const SizedBox(
+              height: 8,
+            ),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-
                 Column(
                   children: [
-
                     Text(
-                      'Projects',
+                      "Projects",
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black54,
-                        decoration: TextDecoration.none,
-                      ),
+                          fontSize: 14,
+                          color: Colors.black54,
+                          decoration: TextDecoration.none),
                     ),
-
                     Text(
-                      '143',
+                      "143",
                       style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black87,
-                        decoration: TextDecoration.none,
-                      ),
+                          fontSize: 18,
+                          color: Colors.black87,
+                          decoration: TextDecoration.none),
                     ),
-
                   ],
                 ),
-
                 Column(
                   children: [
-
                     Text(
-                      'Following',
+                      "Following",
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black54,
-                        decoration: TextDecoration.none,
-                      ),
+                          fontSize: 14,
+                          color: Colors.black54,
+                          decoration: TextDecoration.none),
                     ),
-
                     Text(
-                      '6902',
+                      "2769",
                       style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black87,
-                        decoration: TextDecoration.none,
-                      ),
+                          fontSize: 18,
+                          color: Colors.black87,
+                          decoration: TextDecoration.none),
                     ),
-
                   ],
                 ),
-
                 Column(
                   children: [
-
                     Text(
-                      'Followers',
+                      "Followers",
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black54,
-                        decoration: TextDecoration.none,
-                      ),
+                          fontSize: 14,
+                          color: Colors.black54,
+                          decoration: TextDecoration.none),
                     ),
-
                     Text(
-                      '6789',
+                      "4805",
                       style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black87,
-                        decoration: TextDecoration.none
-                      ),
+                          fontSize: 18,
+                          color: Colors.black87,
+                          decoration: TextDecoration.none),
                     ),
-
                   ],
-                ),
-
+                )
               ],
             ),
-
-            SizedBox(height: 8,),
-
+            const SizedBox(
+              height: 8,
+            ),
             const Divider(
               color: Color(0xFFC1222C),
               thickness: 3,
               indent: 30,
               endIndent: 30,
             ),
-
-            SizedBox(height: 8,),
-
+            const SizedBox(
+              height: 8,
+            ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              child:
-
-              Text(
-                'I choose the product design track because I love solving visual problems using UI/ UX designs',
+              child: Text(
+                "I choose the product design track because I love solving visual problems using UI/ UX designs",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black45,
-                  decoration: TextDecoration.none,
-                ),
+                    fontSize: 15,
+                    color: Colors.black45,
+                    decoration: TextDecoration.none),
               ),
             ),
-
-            SizedBox(height: 8,),
-
+            const SizedBox(
+              height: 8,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-
                 IconButton(
-                  onPressed: (){},
-                  icon: Image.asset('assets/icons/instagram.png'),
+                  onPressed: () {},
+                  icon: Image.asset("assets/icons/facebook.png"),
                   iconSize: 24,
                 ),
-
                 IconButton(
-                  onPressed: (){},
-                  icon: Image.asset('assets/icons/twitter.png'),
+                  onPressed: () {},
+                  icon: Image.asset("assets/icons/twitter.png"),
                   iconSize: 24,
                 ),
-
                 IconButton(
-                  onPressed: (){},
-                  icon: Image.asset('assets/icons/facebook.png'),
-                ),
-
+                  onPressed: () {},
+                  icon: Image.asset("assets/icons/instagram.png"),
+                  iconSize: 24,
+                )
               ],
             ),
-
-            SizedBox(height: 8,),
-
+            const SizedBox(
+              height: 16,
+            ),
             FilledButton(
-              style: FilledButton.styleFrom(
-                backgroundColor: const Color(0xFFC1222C),
-                minimumSize: Size(myScreenWidth * 0.75, 50),
-              ),
-                onPressed: (){
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => VoteMe()),
-                  );
-                  },
-                child: const Text(
-                  'View Profile',
+                style: FilledButton.styleFrom(
+                  backgroundColor: const Color(0xFFC1222C),
+                  minimumSize:
+                      Size(MediaQuery.sizeOf(context).width * 0.75, 50),
                 ),
-            ),
-
+                onPressed: () {},
+                child: const Text("View Profile")),
             const Padding(
               padding: EdgeInsets.only(top: 16, left: 16),
               child: Row(
                 children: [
                   Text(
-                    'Skills',
+                    "Skills",
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black87,
-                      decoration: TextDecoration.none,
+                        fontSize: 18,
+                        color: Colors.black,
+                        decoration: TextDecoration.none),
+                  ),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
+                    height: 120,
+                    width: MediaQuery.sizeOf(context).width / 1.7,
+                    decoration: BoxDecoration(
+                      color: Colors.pink.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(16.0),
                     ),
+                    child: Image.asset("assets/images/skills_img1.png"),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
+                    height: 120,
+                    width: MediaQuery.sizeOf(context).width / 1.7,
+                    decoration: BoxDecoration(
+                      color: Colors.pink.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Image.asset("assets/images/skills_img2.png"),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
+                    height: 120,
+                    width: MediaQuery.sizeOf(context).width / 1.7,
+                    decoration: BoxDecoration(
+                      color: Colors.pink.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Image.asset("assets/images/skills_img3.png"),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
+                    height: 120,
+                    width: MediaQuery.sizeOf(context).width / 1.7,
+                    decoration: BoxDecoration(
+                      color: Colors.pink.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(16.0),
+                    ),
+                    child: Image.asset("assets/images/skills_img4.png"),
+                  ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 16, left: 16),
+              child: Row(
+                children: [
+                  Text(
+                    "Projects",
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        decoration: TextDecoration.none),
                   ),
                 ],
               ),
@@ -248,82 +265,8 @@ class HomeScreen extends StatelessWidget {
 
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-
               child: Row(
-                children: [
-
-                  Container(
-                    margin: const EdgeInsets.all(10),
-                    padding: const EdgeInsets.all(10),
-                    height: 120,
-                    width: myScreenWidth / 1.7,
-                    decoration: BoxDecoration(
-                      color: Colors.pink.shade100,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Image.asset('assets/images/skills_img1.png'),
-                  ),
-
-                  Container(
-                    margin: const EdgeInsets.all(10),
-                    padding: const EdgeInsets.all(10),
-                    height: 120,
-                    width: myScreenWidth / 1.7,
-                    decoration: BoxDecoration(
-                      color: Colors.pink.shade100,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Image.asset('assets/images/skills_img2.png'),
-                  ),
-
-                  Container(
-                    margin: const EdgeInsets.all(10),
-                    padding: const EdgeInsets.all(10),
-                    height: 120,
-                    width: myScreenWidth / 1.7,
-                    decoration: BoxDecoration(
-                      color: Colors.pink.shade100,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Image.asset('assets/images/skills_img3.png'),
-                  ),
-
-                  Container(
-                    margin: const EdgeInsets.all(10),
-                    padding: const EdgeInsets.all(10),
-                    height: 120,
-                    width: myScreenWidth / 1.7,
-                    decoration: BoxDecoration(
-                      color: Colors.pink.shade100,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Image.asset('assets/images/skills_img4.png'),
-                  ),
-
-                ],
-              ),
-            ),
-
-            const Padding(
-              padding: EdgeInsets.only(top: 16, left: 16),
-              child: Row(
-                children: [
-                  Text(
-                    'Projects',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black87,
-                      decoration: TextDecoration.none,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-
-              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
 
                   Column(
@@ -332,7 +275,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.2,
+                        width:MediaQuery.sizeOf(context).width / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project1.png',
@@ -343,24 +286,18 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Text('Project Title ', style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black87,),),
+
+                          const Text('Project Title', style: TextStyle(fontSize: 16.0, color: Colors.black87, decoration: TextDecoration.none),),
+
+                          const SizedBox(width: 16.0,),
+
+                          Container(
+                            decoration: BoxDecoration(color: Colors.pink.shade500, borderRadius: BorderRadius.circular(100),),
+                            child: const Icon(Icons.arrow_forward, color: Colors.white,),
                           ),
 
-                          SizedBox(width: 2.0,),
-
-                          FloatingActionButton(
-                              onPressed: (){},
-                            backgroundColor: Colors.pink,
-                            mini: true,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100.0)),
-                            child: const Icon(Icons.arrow_forward, color: Colors.white, size: 30,),
-                          ),
                         ],
                       ),
-
                     ],
                   ),
 
@@ -370,7 +307,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.2,
+                        width:MediaQuery.sizeOf(context).width / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project2.png',
@@ -381,24 +318,18 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Text('Project Title ', style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black87,),),
+
+                          const Text('Project Title', style: TextStyle(fontSize: 16.0, color: Colors.black87, decoration: TextDecoration.none),),
+
+                          const SizedBox(width: 16.0,),
+
+                          Container(
+                            decoration: BoxDecoration(color: Colors.pink.shade500, borderRadius: BorderRadius.circular(100),),
+                            child: const Icon(Icons.arrow_forward, color: Colors.white,),
                           ),
 
-                          SizedBox(width: 2.0,),
-
-                          FloatingActionButton(
-                            onPressed: (){},
-                            backgroundColor: Colors.pink,
-                            mini: true,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100.0)),
-                            child: const Icon(Icons.arrow_forward, color: Colors.white, size: 30,),
-                          ),
                         ],
                       ),
-
                     ],
                   ),
 
@@ -408,7 +339,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.2,
+                        width:MediaQuery.sizeOf(context).width / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project3.png',
@@ -419,24 +350,18 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Text('Project Title ', style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black87,),),
+
+                          const Text('Project Title', style: TextStyle(fontSize: 16.0, color: Colors.black87, decoration: TextDecoration.none),),
+
+                          const SizedBox(width: 16.0,),
+
+                          Container(
+                            decoration: BoxDecoration(color: Colors.pink.shade500, borderRadius: BorderRadius.circular(100),),
+                            child: const Icon(Icons.arrow_forward, color: Colors.white,),
                           ),
 
-                          SizedBox(width: 2.0,),
-
-                          FloatingActionButton(
-                            onPressed: (){},
-                            backgroundColor: Colors.pink,
-                            mini: true,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100.0)),
-                            child: const Icon(Icons.arrow_forward, color: Colors.white, size: 30,),
-                          ),
                         ],
                       ),
-
                     ],
                   ),
 
@@ -446,7 +371,7 @@ class HomeScreen extends StatelessWidget {
                         margin: const EdgeInsets.all(10),
                         // padding: const EdgeInsets.all(10),
                         height: 180,
-                        width: myScreenWidth / 2.2,
+                        width:MediaQuery.sizeOf(context).width / 2.2,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
                           child: Image.asset('assets/images/project4.png',
@@ -457,33 +382,24 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Text('Project Title ', style: TextStyle(fontSize: 14, decoration: TextDecoration.none, color: Colors.black87,),),
+
+                          const Text('Project Title', style: TextStyle(fontSize: 16.0, color: Colors.black87, decoration: TextDecoration.none),),
+
+                          const SizedBox(width: 16.0,),
+
+                          Container(
+                            decoration: BoxDecoration(color: Colors.pink.shade500, borderRadius: BorderRadius.circular(100),),
+                            child: const Icon(Icons.arrow_forward, color: Colors.white,),
                           ),
 
-                          SizedBox(width: 2.0,),
-
-                          FloatingActionButton(
-                            onPressed: (){},
-                            backgroundColor: Colors.pink,
-                            mini: true,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100.0)),
-                            child: const Icon(Icons.arrow_forward, color: Colors.white, size: 30,),
-                          ),
                         ],
                       ),
-
                     ],
                   ),
-
-
 
                 ],
               ),
             ),
-
           ],
         ),
       ),
